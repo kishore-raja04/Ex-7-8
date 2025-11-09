@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan EMI Calculator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #f0f2f5;
+    }
+    .calculator {
+        background: white;
+        padding: 30px;
+        border: 2px solid #007bff;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .calculator h2 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+    .calculator label {
+        display: block;
+        margin-top: 10px;
+        color: #007bff;
+        font-weight: bold;
+    }
+    .calculator input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+    .result {
+        background: #007bff;
+        color: white;
+        padding: 8px;
+        margin-top: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .project-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: linear-gradient(45deg, #ff5252, #ffb300);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+}
+
+</style>
+</head>
+<body>
+<div class="calculator">
+    <h2>Loan EMI Calculator</h2>
+    
+    <label>Loan Amount (Rs.):</label>
+    <input type="number" id="loanAmount" oninput="calculateEMI()">
+    
+    <label>Annual Interest Rate (%):</label>
+    <input type="number" id="interestRate" oninput="calculateEMI()">
+    
+    <label>Tenure (Years):</label>
+    <input type="number" id="tenure" oninput="calculateEMI()">
+    
+    <div class="result" id="loanResult">Loan Amount: ₹0</div>
+    <div class="result" id="interestResult">Total Interest: ₹0</div>
+    <div class="result" id="emiResult">EMI: ₹0</div>
+    <div class="result" id="totalResult">Total Repayment: ₹0</div>
+</div>
+
+<script>
+function calculateEMI() {
+    const P = parseFloat(document.getElementById('loanAmount').value) || 0;
+    const annualRate = parseFloat(document.getElementById('interestRate').value) || 0;
+    const years = parseFloat(document.getElementById('tenure').value) || 0;
+
+    const R = annualRate / 12 / 100; // monthly interest rate
+    const N = years * 12; // total months
+
+    let EMI = 0;
+    if (R !== 0 && N !== 0) {
+        EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+    } else if (N !== 0) {
+        EMI = P / N; // simple division if interest is 0
+    }
+
+    const totalRepayment = EMI * N;
+    const totalInterest = totalRepayment - P;
+
+    document.getElementById('loanResult').innerHTML = "Loan Amount: ₹" + P.toLocaleString();
+    document.getElementById('interestResult').innerHTML = "Total Interest: ₹" + totalInterest.toLocaleString();
+    document.getElementById('emiResult').innerHTML = "EMI: ₹" + EMI.toFixed(0).toLocaleString();
+    document.getElementById('totalResult').innerHTML = "Total Repayment: ₹" + totalRepayment.toLocaleString();
+}
+</script>
+</body>
+</html>

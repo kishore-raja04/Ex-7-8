@@ -1,0 +1,30 @@
+# =========================
+# FRONTEND
+# =========================
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# =========================
+# BACKEND
+# =========================
+backend/node_modules/
+backend/dist/
+backend/logs/
+backend/uploads/
+backend/.env
+backend/.env.local
+
+# =========================
+# COMMON
+# =========================
+.env
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

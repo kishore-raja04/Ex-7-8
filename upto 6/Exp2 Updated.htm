@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kishore Raja K - Web Developer Portfolio">
+    <meta name="author" content="Kishore Raja K">
+    <title>Welcome to My Portfolio - Kishore Raja K</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p><em>Learn more About Me</em></p>
+    </header>
+
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    
+    <section id="home">
+        <h2>Home</h2>
+        <div>
+            <p>Welcome to my personal portfolio website. Here you'll find information about my journey as a web developer.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div>
+            <p>Hello! I'm <strong>Kishore Raja K</strong>, a passionate web developer enthusiastic about front-end and back-end technologies.</p>
+            
+            <p>I began my journey at <span style="font-weight: bold;">Prodigy</span> in 2024 and now intern at <span style="font-weight: bold;">Webgapp</span> working on full stack projects.</p>
+            
+            <p>My stack includes <em>HTML, CSS, JavaScript, Python, MySQL</em> and I'm learning <em>React and Django</em>.</p>
+            
+            
+            <p><strong>HTML Entities Example:</strong> To display a less than sign we write: &lt; and for greater than: &gt;</p>
+            <p>Other entities: &amp; (ampersand), &quot; (quote), &copy; (copyright)</p>
+            
+            
+            <p><a href="#contact">Jump to Contact (Bookmark)</a></p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills Table</h2>
+        
+        <table border="1">
+            <caption>My Technical Skills</caption>
+            <thead>
+                <tr>
+                    <th>Technology</th>
+                    <th>Proficiency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML/CSS</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Python</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Django</td>
+                    <td>Beginner</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Projects</h3>
+        <p>Here's what I've worked on:</p>
+        
+        
+        <ul>
+            <li>Personal Portfolio Website</li>
+            <li>Responsive E-commerce Landing Page</li>
+            <li>Flask-based ToDo Web App</li>
+        </ul>
+
+        <h4>My Learning Path:</h4>
+        <ol>
+            <li>Master HTML &amp; CSS</li>
+            <li>Learn JavaScript</li>
+            <li>Dive into Python &amp; Django</li>
+            <li>Build Full Stack Projects</li>
+        </ol>
+
+        
+        <div>
+            <h4>Profile</h4>
+            <img src="images/my-photo.jpg" alt="Kishore Raja K Profile Picture" width="150" height="150">
+            <p><small>Profile placeholder image</small></p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div>
+            <p><strong>Email me at:</strong> <a href="mailto:kishoreraja.kkr@gmail.com">kishoreraja.kkr@gmail.com</a></p>
+            
+            
+            <p><a href="https://www.linkedin.com/in/kishore-raja-k" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+            
+            
+            <p>You can also find me on:</p>
+            <ul>
+                <li><a href="https://github.com/kishoreraja-k" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/kishoreraja_k" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+    </section>
+
+    
+    <section>
+        <h3>Technologies I Use</h3>
+        <dl>
+            <dt>Frontend</dt>
+            <dd>HTML5, CSS3, JavaScript, React</dd>
+            <dt>Backend</dt>
+            <dd>Python, Django, Flask</dd>
+            <dt>Database</dt>
+            <dd>MySQL, PostgreSQL</dd>
+        </dl>
+    </section>
+
+    <!-- HTML5 Form Section -->
+<body>
+    
+    <div>
+        <h1>Online Registration Form</h1>
+        <h2>Web Technology Lab - Exercise 2</h2>
+        <p><em>Please fill out all required fields to complete your registration</em></p>
+    </div>
+
+    <!-- Single form element with required attributes -->
+    <form action="/serverlogic" method="post" enctype="multipart/form-data">
+        
+        <!-- Personal Information Fieldset -->
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <div>
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" 
+                       required maxlength="50" autofocus>
+            </div>
+            
+            <div>
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" 
+                       required maxlength="50">
+            </div>
+            
+            <div>
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+            
+            <div>
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1-234-567-8900" 
+                       pattern="[+]?[0-9\s\-()]{10,15}" required>
+            </div>
+            
+            <div>
+                <label for="birthDate">Date of Birth *</label>
+                <input type="date" id="birthDate" name="birthDate" required 
+                       min="1920-01-01" max="2010-12-31">
+            </div>
+            
+            <div>
+                <label for="age">Age *</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" 
+                       required min="13" max="120">
+            </div>
+            
+            <div>
+                <label>Gender *</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                    
+                    <input type="radio" id="other" name="gender" value="other" required>
+                    <label for="other">Other</label>
+                </div>
+            </div>
+        </fieldset>
+        
+        <!-- Account Information Fieldset -->
+        <fieldset>
+            <legend>Account Information</legend>
+            
+            <div>
+                <label for="username">Username *</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" 
+                       required minlength="3" maxlength="20" pattern="[a-zA-Z0-9_]+">
+            </div>
+            
+            <div>
+                <label for="password">Password *</label>
+                <input type="password" id="password" name="password" placeholder="Create a strong password" 
+                       required minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            </div>
+            
+            <div>
+                <label for="website">Personal Website</label>
+                <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+            </div>
+            
+            <div>
+                <label for="searchTerm">How did you find us?</label>
+                <input type="search" id="searchTerm" name="searchTerm" placeholder="Search engine, social media, etc.">
+            </div>
+        </fieldset>
+        
+        <!-- Additional Information Fieldset -->
+        <fieldset>
+            <legend>Additional Information</legend>
+            
+            <div>
+                <label for="country">Country *</label>
+                <select id="country" name="country" required>
+                    <option value="">-- Select your country --</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="in">India</option>
+                    <option value="au">Australia</option>
+                    <option value="de">Germany</option>
+                    <option value="fr">France</option>
+                    <option value="jp">Japan</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div>
+                <label>Interests (Select all that apply) *</label>
+                <div>
+                    <input type="checkbox" id="technology" name="interest1" value="technology" required>
+                    <label for="technology">Technology</label>
+                    
+                    <input type="checkbox" id="sports" name="interest2" value="sports">
+                    <label for="sports">Sports</label>
+                    
+                    <input type="checkbox" id="music" name="interest3" value="music">
+                    <label for="music">Music</label>
+                    
+                    <input type="checkbox" id="travel" name="interest4" value="travel">
+                    <label for="travel">Travel</label>
+                    
+                    <input type="checkbox" id="reading" name="interest5" value="reading">
+                    <label for="reading">Reading</label>
+                    
+                    <input type="checkbox" id="cooking" name="interest6" value="cooking">
+                    <label for="cooking">Cooking</label>
+                </div>
+            </div>
+            
+            <div>
+                <label for="bio">Tell us about yourself</label>
+                <textarea id="bio" name="bio" rows="5" cols="50" 
+                          placeholder="Share something interesting about yourself, your hobbies, goals, or anything you'd like us to know..."></textarea>
+            </div>
+            
+            <div>
+                <label for="resume">Upload Resume/CV</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+            </div>
+        </fieldset>
+        
+        <!-- Skills Progress Section -->
+        <fieldset>
+            <legend>Skills Assessment</legend>
+            
+            <div>
+                <label for="htmlSkill">HTML/CSS Proficiency</label>
+                <progress id="htmlSkill" value="75" max="100">75%</progress>
+            </div>
+            
+            <div>
+                <label for="jsSkill">JavaScript Knowledge</label>
+                <progress id="jsSkill" value="60" max="100">60%</progress>
+            </div>
+            
+            <div>
+                <label for="programmingSkill">Overall Programming Experience</label>
+                <progress id="programmingSkill" value="80" max="100">80%</progress>
+            </div>
+        </fieldset>
+        
+        <!-- Form Submission Buttons -->
+        <div>
+            <input type="submit" value="Register Now">
+            <input type="reset" value="Clear Form">
+        </div>
+        
+    </form>
+    
+    <!-- Additional content outside form -->
+    <div>
+        <h3>Registration Progress</h3>
+        <progress value="0" max="100" id="formProgress">0%</progress>
+        <p>Complete the form to see your progress</p>
+    </div>
+    
+
+    
+</body>
+
+<!-- Media Section -->
+<section id="media">
+    <h2>Multimedia Elements</h2>
+
+    <h3>Audio Example</h3>
+    <audio controls>
+        <source src="C:\Portfolio1\underwater-ambience-376890.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h3>Video Example</h3>
+    <video width="320" height="240" controls>
+        <source src="Underwater.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h3>Embed Element Example</h3>
+    <embed src="C:\Portfolio1\Exploratory data analysis.pdf" width="300" height="200" type="application/pdf">
+
+    <h3>Iframe Example (YouTube)</h3>
+
+<h3>Iframe Example (Northern Lights – Real-Time)</h3>
+<iframe width="560" height="315"
+    src="https://www.youtube.com/embed/N-TV_6eIDxw"
+    title="Northern Lights in Real Time | Aurora Borealis (4K UHD)"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
+
+
+
+<!-- Progress Example -->
+<section id="progress">
+    <h2>My Learning Progress</h2>
+    <label for="html">HTML:</label>
+    <progress id="html" value="90" max="100">90%</progress><br><br>
+    
+    <label for="js">JavaScript:</label>
+    <progress id="js" value="70" max="100">70%</progress><br><br>
+
+    <label for="django">Django:</label>
+    <progress id="django" value="40" max="100">40%</progress>
+</section>
+
+
+    <!-- Footer section -->
+    <footer>
+        <div>
+            <p>&copy; 2025 Kishore Raja K. All rights reserved.</p>
+            <p><small>Built with HTML5 | Last updated: July 2025</small></p>
+        </div>
+    </footer>
+</body>
+
+</html>

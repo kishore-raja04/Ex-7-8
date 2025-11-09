@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Kishore Raja K</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+
+    <!-- Header -->
+    <header class="main-header">
+        <h1 class="site-title">Kishore Raja K</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <img src="images/BannerWd.png" alt="Banner Image">
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <h2>Welcome to My Portfolio</h2>
+        <p>This is where creativity meets technology. I specialize in full-stack development, blending design and functionality into seamless digital experiences.</p>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="gallery">
+        <div class="gallery-item">
+            <div class="caption">
+                <img src="images/Quiz.png">
+            </div>
+        </div>
+        <div class="gallery-item">
+            <div class="caption"><img src="images/Expense-Tracker.png"></div>
+        </div>
+        <div class="gallery-item">
+            <div class="caption"><img src="images/Hotel reg.png"></div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section class="content-block">
+        <img src="images\Quiz.png" alt="Project 1">
+        <div>
+            <h3>Real Time Quiz</h3>
+            <p>An interactive Django-powered quiz platform that dynamically fetches questions from the backend, 
+            evaluates answers instantly, and displays correct responses in real-time. User scores and 
+            performance analytics are securely stored in the backend for future reference.</p>
+        </div>
+    </section>
+
+    <section class="content-block reverse">
+        <div>
+            <h3>Expense-Tracker</h3>
+            <p>A powerful Django-based expense management system enabling users to record, track, and 
+            visualize their spending effortlessly. Built with Python, JavaScript, HTML, CSS, and Django, 
+            it offers an intuitive interface and interactive charts for better financial insights.</p>
+        </div>
+        <img src="images/Expense-Tracker.png" alt="Project 2">
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kishore Raja K | All Rights Reserved</p>
+    </footer>
+ <script>
+        document.getElementById("searchInput").addEventListener("keyup", function() {
+            let filter = this.value.toLowerCase();
+            let items = document.querySelectorAll("#portfolioItems .item");
+
+            items.forEach(item => {
+                let text = item.textContent.toLowerCase();
+                item.style.display = text.includes(filter) ? "" : "none";
+            });
+        });
+    </script>
+
+</body>
+</html>
